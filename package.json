@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "json-server --watch data/notes.json --host  127.0.0.1 --port 3002"
+    "json-server": "json-server --watch data/notes.json --host  127.0.0.1 --port 3003"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

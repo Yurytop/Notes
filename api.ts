@@ -1,13 +1,15 @@
+
 import { INote } from "./types/notes";
 
 export const getAllNotes = async (): Promise<INote[]> => {
-    const res = await fetch (`${process.env.API_HOST}/notes`, {cache: "no-store"});
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes`, {cache: "no-store"});
     const notes = await res.json();
     return notes;
 }
 
 export const addNote = async (note: INote): Promise<INote> => {
-    const res = await fetch(`${process.env.API_HOST}/notes`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes`, {
+        cache: "no-store",
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -19,7 +21,8 @@ export const addNote = async (note: INote): Promise<INote> => {
 }
 
 export const editNote = async (note: INote): Promise<INote> => {
-    const res = await fetch(`${process.env.API_HOST}/notes/${note.id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes/${note.id}`, {
+        cache: "no-store",
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -31,7 +34,7 @@ export const editNote = async (note: INote): Promise<INote> => {
 }
 
 export const deleteNote = async (id: string): Promise<void> => {
-    await fetch(`${process.env.API_HOST}/notes/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes/${id}`, {
         method: 'DELETE'
     })
 }

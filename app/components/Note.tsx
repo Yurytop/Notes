@@ -45,7 +45,7 @@ const Note: React.FC<NoteProps> = ({note}) => {
         <tr key={note.id}>
             <td>{note.autor}</td>
             <td>{note.text}</td>
-            <td className="flex gap-5">
+            <td className="flex gap-5 justify-end">
                 <SlMagnifier onClick={() => setModalOpenFullInfo(true)} cursor="pointer" className="text-yellow-500" size={20} />
                 <Modal modalOpen={modalOpenFullInfo} setModalOpen={setModalOpenFullInfo}>
                     <h3 className="font-bold text-lg text-center">Полная информация о заметке</h3>
