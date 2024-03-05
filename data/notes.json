@@ -1,0 +1,56 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "autor": "Виктор",
+      "text": "Книга к прочтению 'Война и мир'",
+      "priority": "Низкий",
+      "addDate": "04.03.2024"
+    },
+    {
+      "id": "3",
+      "autor": "Марина",
+      "text": "День рождения Ирины в среду",
+      "priority": "Высокий",
+      "addDate": "04.03.2024"
+    },
+    {
+      "id": "5",
+      "autor": "Олег",
+      "text": "DeepCool - норм фирма",
+      "priority": "Высокий",
+      "addDate": "04.03.2024"
+    },
+    {
+      "id": "6",
+      "autor": "Олег",
+      "text": "Горные Лыжи",
+      "priority": "Высокий",
+      "addDate": "01.03.2024"
+    },
+    {
+      "id": "fd78a576-e744-4a49-9dd8-ac69caa6fd9d",
+      "autor": "Лена",
+      "text": "Любит зеленый чай",
+      "priority": "Высокий",
+      "addDate": "04.03.2024"
+    },
+    {
+      "id": "248fdbb9-33e2-43e7-822b-12a0eea49f9f",
+      "autor": "Петр",
+      "text": "Лена любит розы",
+      "priority": "Высокий",
+      "addDate": "02.03.2024"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
