@@ -10,6 +10,7 @@ export const getAllNotes = async (): Promise<INote[]> => {
 export const addNote = async (note: INote): Promise<INote> => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes`, {
         cache: "no-store",
+        mode: 'no-cors',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -23,6 +24,7 @@ export const addNote = async (note: INote): Promise<INote> => {
 export const editNote = async (note: INote): Promise<INote> => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes/${note.id}`, {
         cache: "no-store",
+        mode: 'no-cors',
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -35,6 +37,7 @@ export const editNote = async (note: INote): Promise<INote> => {
 
 export const deleteNote = async (id: string): Promise<void> => {
     await fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/notes/${id}`, {
+        mode: 'no-cors',
         method: 'DELETE'
     })
 }
