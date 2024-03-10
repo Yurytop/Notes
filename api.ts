@@ -12,7 +12,8 @@ export const addNote = async (note: INote): Promise<INote> => {
         cache: "no-store",
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify(note)
     })
@@ -25,7 +26,8 @@ export const editNote = async (note: INote): Promise<INote> => {
         cache: "no-store",
         method: 'PUT',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify(note)
     })
